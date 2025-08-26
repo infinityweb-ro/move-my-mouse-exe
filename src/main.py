@@ -27,6 +27,19 @@ SetCursorPos = user32.SetCursorPos
 SetCursorPos.argtypes = [wintypes.INT, wintypes.INT]  # x, y coordinates
 SetCursorPos.restype = wintypes.BOOL
 
+# Prevent sleep and keep display on
+ES_CONTINUOUS       = 0x80000000
+ES_SYSTEM_REQUIRED  = 0x00000001
+ES_DISPLAY_REQUIRED = 0x00000002
+
+def prevent_sleep():
+    ctypes.windll.kernel32.SetThreadExecutionState(
+        ES_CONTINUOUS | ES_SYSTEM_REQUIRED | ES_DISPLAY_REQUIRED
+    )
+
+def allow_sleep():
+    ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS)
+
 # --- Helper functions to get/set mouse position ---
 def get_cursor_pos():
     """Return current mouse cursor position as (x, y)."""
@@ -112,12 +125,14 @@ class MouseJiggler:
         self._stop.clear()
         self._thread = threading.Thread(target=self._run, daemon=True)
         self._thread.start()
+        prevent_sleep()
 
     def stop(self):
         """Stop the jiggler and wait for thread to exit."""
         self._stop.set()
         if self._thread:
             self._thread.join(timeout=2)
+        allow_sleep()
 
 
 def resource_path(relative_path):
