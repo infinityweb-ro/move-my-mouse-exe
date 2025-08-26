@@ -1,5 +1,7 @@
-/dist
-/build
-/.vscode
+dist
+build
+.vscode
 
-.spec
+*.spec
+
+build-commands.md
