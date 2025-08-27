@@ -153,7 +153,7 @@ class App(tk.Tk):
         icon_path = resource_path("assets/click_64px.ico")  # compatible size
         self.iconbitmap(icon_path)
 
-        self.title("Tiny Mouse Jiggler")
+        self.title("Move My Mouse")
         self.geometry("300x200")       # bigger window
         self.resizable(False, False)
         self.overrideredirect(False)
@@ -235,7 +235,7 @@ class App(tk.Tk):
 
 # --- Command-Line Interface (optional) ---
 def main():
-    parser = argparse.ArgumentParser(description="Tiny Mouse Jiggler")
+    parser = argparse.ArgumentParser(description="Move My Mouse")
     parser.add_argument("--headless", action="store_true", help="Run without GUI")
     parser.add_argument("--interval", type=float, default=45, help="Base interval seconds")
     parser.add_argument("--jitter", type=float, default=10, help="Interval jitter ± seconds")
