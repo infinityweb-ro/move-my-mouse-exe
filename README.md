@@ -2,7 +2,7 @@
 
 A lightweight and simple **mouse jiggler app** that keeps your computer awake by simulating mouse activity. Perfect for preventing sleep mode, screensavers, or status changes in communication tools.  
 
-🔗 **Live demo & details:** [https://infinityweb-ro.github.io/move-my-mouse/](https://infinityweb-ro.github.io/move-my-mouse/)
+🔗 **Details:** [https://infinityweb-ro.github.io/move-my-mouse/](https://infinityweb-ro.github.io/move-my-mouse/)
 
 ---
 
@@ -17,9 +17,9 @@ A lightweight and simple **mouse jiggler app** that keeps your computer awake by
 
 ## 🚀 Installation
 
-### Option 1: Download Executable
-1. Go to the [Releases](../../releases) page  
-2. Download the latest `.exe` file  
+### Option 1: Download Latest Executable
+1. Go to the [Releases](https://infinityweb-ro.github.io/move-my-mouse/) page  
+2. Download the `.exe` file  
 3. Run it — no installation required  
 
 ### Option 2: Run from Source
