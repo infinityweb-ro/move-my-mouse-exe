@@ -40,7 +40,7 @@ python main.py
 ---
 
 ## 📸 Screenshots
-<img width="298" height="230" alt="image" src="https://github.com/user-attachments/assets/0fcc3a61-2ab1-41aa-a3e9-330475acb9ee" />
+<img width="302" height="232" alt="image" src="https://github.com/user-attachments/assets/024616a5-5c4c-4c91-8b73-22d22b579557" />
 
 
 ---
